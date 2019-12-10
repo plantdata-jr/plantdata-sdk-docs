@@ -1,0 +1,68 @@
+@import "../../../../../define/index";
+
+.plantdata-ns {
+  &.pdvis-common-config-modal {
+
+    .pdui-form-fieldset {
+      border: 0;
+
+      .pdvis-form-control-title {
+        line-height: 40px;
+        background: #f6f6f6;
+        padding-left: 16px;
+      }
+    }
+
+    [name="common"] {
+      & > div {
+        margin-top: 8px;
+      }
+
+      label {
+        width: 120px;
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent;
+        padding-left: 0;
+      }
+
+      input, select {
+        width: 380px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    [name="node"], [name="link"] {
+      .pdvis-form-control-title {
+        width: 120px;
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent;
+        padding-left: 0;
+      }
+
+      .pdvis-form-control-content {
+        width: 380px;
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+
+    .pdvis-common-config-color {
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    [name="nodeEmphasisColor"], [name="nodeReduceColor"] {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+    }
+
+    [name="linkEmphasisColor"], [name="linkReduceColor"] {
+      width: 20px;
+      height: 8px;
+    }
+  }
+}

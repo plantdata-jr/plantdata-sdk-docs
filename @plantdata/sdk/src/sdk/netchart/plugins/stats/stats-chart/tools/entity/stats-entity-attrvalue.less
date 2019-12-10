@@ -1,0 +1,15 @@
+@import "../../../../../../../define/index";
+
+.plantdata-ns {
+  @label-width: 120px;
+
+  &.pdsdk-stats-chart-edit-dialog {
+    .pdsdk-stats-chart-editor.pdsdk-stats-entity-attrvalue {
+      .pdsdk-stats-chart-edit-x {
+        select {
+          width: calc(~"(100% - @{label-width}) / 2");
+        }
+      }
+    }
+  }
+}

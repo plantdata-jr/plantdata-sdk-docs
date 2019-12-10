@@ -1,0 +1,54 @@
+@import "../../define/index";
+
+.plantdata-ns {
+  .pd-panel-float-top {
+    .pd-panel-float-item {
+      float: right;
+      margin-left: 15px;
+      position: relative;
+      display: inline-block;
+    }
+  }
+
+  .pd-panel-float-bottom {
+    .pd-panel-float-item {
+      position: absolute;
+      bottom: 0;
+    }
+  }
+
+  .pd-panel-float-left, .pd-panel-float-right {
+    //.pd-panel-float-item {
+    //  display: inline-block;
+    //}
+    .pd-panel-float-item.active {
+      display: inline-block;
+    }
+  }
+
+  .pd-plugin-foot {
+    text-align: right;
+    padding: 8px;
+    border-top: @divider-default;
+    background: @color-light;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+
+    button {
+      .border-radius();
+      margin-left: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .plantdata-ns.pd-container {
+    .pd-panel-float-top {
+      .pd-panel-float-item {
+        position: static;
+      }
+    }
+  }
+}

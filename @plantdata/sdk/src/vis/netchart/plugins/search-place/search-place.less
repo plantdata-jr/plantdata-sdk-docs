@@ -1,0 +1,40 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-search-place-container {
+    .pdvis-float-item-head {
+      width: 110px;
+    }
+
+    .pdvis-float-item-detail {
+      .pdui-autocomplete {
+        & > input {
+          position: absolute;
+          padding-left: 28px;
+          padding-right: 52px;
+          width: 100% !important;
+          left: 0;
+        }
+
+        & > svg {
+          &:nth-child(3) {
+            position: absolute;
+            right: 26px;
+          }
+
+          &:nth-child(4) {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .plantdata-ns.pd-container {
+    .pdvis-search-place-container {
+    }
+  }
+}

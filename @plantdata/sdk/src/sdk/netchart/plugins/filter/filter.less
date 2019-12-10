@@ -1,0 +1,45 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-chart-filter-panel {
+    .pdvis-edit-item[data-path="attAttFilters"] {
+      .pdvis-edit-item-content {
+        .pd-no-data {
+          padding: 16px 0;
+          display: none;
+          text-align: center;
+        }
+
+        .pdsdk-filter-add {
+          border-top: @divider-default;
+          padding: 8px 8px;
+
+          button {
+            width: 100%;
+
+            svg {
+              vertical-align: -7px;
+              fill: @color-primary;
+            }
+
+            &:hover {
+              svg {
+                fill: @color-light;
+              }
+            }
+          }
+        }
+
+        .pdvis-filter-att-value-container.disabled {
+          * {
+            display: none;
+          }
+
+          .pd-no-data {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

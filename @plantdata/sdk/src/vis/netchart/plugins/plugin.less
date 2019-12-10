@@ -1,0 +1,122 @@
+@import "../../../define/index";
+
+.plantdata-ns {
+  .pd-panel-float-item {
+    .pdvis-float-item-head {
+      width: 80px;
+      height: 40px;
+      cursor: pointer;
+      background: @color-light;
+      .box-shadow();
+      .transition();
+      svg {
+        fill: @color-font-03;
+      }
+      .pd-panel-icon {
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        z-index: 1;
+        .transition();
+      }
+      .pd-panel-tooltip {
+        text-align: left;
+        height: 40px;
+        .font-body-1();
+        line-height: 40px;
+        .transition();
+        .line-hidden();
+      }
+      & > * {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:hover {
+        background: @color-general-ac06;
+        & > * {
+          color: @color-primary;
+        }
+        svg {
+          fill: @color-primary;
+        }
+      }
+      &.active {
+        color: @color-light;
+        .pd-panel-icon {
+          background: @color-primary;
+          svg {
+            fill: @color-light;
+          }
+        }
+      }
+      &.disabled {
+        opacity: .3;
+        cursor: not-allowed;
+      }
+    }
+    .pdvis-float-item-detail {
+      padding: 16px;
+      display: none;
+      position: absolute;
+      right: 0;
+      background: @color-light;
+      .box-shadow();
+      top: 48px;
+    }
+    &.active {
+      .pdvis-float-item-head {
+        & > * {
+          color: @color-primary;
+        }
+        svg {
+          fill: @color-primary;
+        }
+      }
+      .pdvis-float-item-detail {
+        display: block;
+      }
+    }
+  }
+
+  .pd-panel-float-left, .pd-panel-float-right {
+    .pdvis-float-item-detail {
+      left: auto;
+      right: 0;
+      position: static;
+      margin-top: 8px;
+    }
+  }
+
+  .pd-panel-float-left {
+    .pdvis-float-item-detail {
+      left: 0;
+      right: auto;
+    }
+  }
+
+  .pd-panel-float-right {
+    .pdvis-float-item-detail {
+      left: auto;
+      right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .plantdata-ns.pd-container {
+    .pd-panel-float-top {
+      .pd-panel-float-item {
+        .pdvis-float-item-head {
+          width: 40px;
+          .pd-panel-tooltip {
+            display: none;
+          }
+        }
+        .pdvis-float-item-detail {
+          left: 15px;
+          right: 15px;
+        }
+      }
+    }
+  }
+}

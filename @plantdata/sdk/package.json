@@ -1,0 +1,60 @@
+{
+  "_from": "@plantdata/sdk@5.7.5",
+  "_id": "@plantdata/sdk@5.7.5",
+  "_inBundle": false,
+  "_integrity": "sha1-3zZkMYDUXUdh7ZUgole+CDoyxL0=",
+  "_location": "/@plantdata/sdk",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@plantdata/sdk@5.7.5",
+    "name": "@plantdata/sdk",
+    "escapedName": "@plantdata%2fsdk",
+    "scope": "@plantdata",
+    "rawSpec": "5.7.5",
+    "saveSpec": null,
+    "fetchSpec": "5.7.5"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "http://192.168.4.3:7001/@plantdata/sdk/download/@plantdata/sdk-5.7.5.tgz",
+  "_shasum": "df36643180d45d4761ed9520a257be083a32c4bd",
+  "_spec": "@plantdata/sdk@5.7.5",
+  "_where": "E:\\workspaces\\WebstormProjects\\@plantdata\\v2\\jssdk-doc",
+  "author": {
+    "name": "jiangrun002",
+    "email": "451183365@qq.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@zc/netchart": "^2.0.0-beta",
+    "d3": "^4.13.0",
+    "daterangepicker": "^3.0.3",
+    "echarts": "^4.0.4",
+    "echarts-wordcloud": "^1.1.3",
+    "jquery": "^3.4.1",
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.5",
+    "moment": "^2.18.1",
+    "moment-es6": "^1.0.0",
+    "reflect-metadata": "^0.1.13",
+    "xss": "^1.0.6"
+  },
+  "deprecated": false,
+  "description": "配置手册 [docs]",
+  "devDependencies": {},
+  "homepage": "",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "module": "./index.js",
+  "name": "@plantdata/sdk",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "scripts": {},
+  "types": "./index.d.ts",
+  "version": "5.7.5"
+}

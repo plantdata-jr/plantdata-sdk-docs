@@ -1,0 +1,78 @@
+@import "../../../../../define/index";
+
+.plantdata-ns {
+  .pdsdk-stats-chart {
+    .pdsdk-stats-chart-header {
+      padding: 8px;
+      position: relative;
+      border-bottom: @divider-default;
+
+      span {
+        display: inline-block;
+        height: 24px;
+        line-height: 24px;
+      }
+
+      .pdsdk-stats-chart-btn {
+        float: right;
+        cursor: pointer;
+
+        svg {
+          fill: @color-font-03;
+
+          &:hover {
+            fill: @color-primary;
+          }
+        }
+      }
+
+
+      & ~ .pdsdk-stats-chart-body {
+        height: calc(~"100% - 107px");
+      }
+    }
+
+    .pdsdk-stats-chart-body {
+      padding-top: 10px;
+      height: calc(~"100% - 56px");
+      .scroll();
+
+      .pdsdk-stats-chart-item {
+        margin: 8px;
+        .box-shadow();
+      }
+    }
+
+    .pdsdk-stats-chart-add {
+      padding: 8px 8px;
+      width: 100%;
+      display: none;
+
+      button {
+        width: 100%;
+
+        svg {
+          vertical-align: -7px;
+          fill: @color-primary;
+        }
+
+        &:hover {
+          svg {
+            fill: @color-light;
+          }
+        }
+      }
+    }
+
+    &.pdsdk-stats-chart-edit-true {
+      .pdsdk-stats-chart-add {
+        display: block;
+      }
+    }
+  }
+
+  .pd-panel-page > .pdsdk-stats-chart {
+    height: 100%;
+    overflow: hidden;
+  }
+}
