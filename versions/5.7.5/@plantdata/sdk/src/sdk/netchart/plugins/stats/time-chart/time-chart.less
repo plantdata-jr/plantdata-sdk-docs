@@ -1,0 +1,200 @@
+@import "../../../../../define/index";
+
+.plantdata-ns {
+  .pdsdk-timechart-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    .pdsdk-timechart-controls {
+      position: absolute;
+      left: 0;
+      bottom: 7px;
+      z-index: 2;
+      //border-radius: 2px;
+      //overflow: hidden;
+      .box-shadow();
+
+      .pdsdk-timechart-split {
+        width: 1px;
+        height: 20px;
+        margin-top: 6px;
+        margin-right: -1px;
+        background: @color-primary-00;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+      }
+
+      .pdui-btn {
+        width: 30px;
+        min-width: 30px;
+        height: 30px;
+        min-height: 30px;
+        line-height: 30px;
+        .border-radius();
+        cursor: pointer;
+        outline: 0;
+        border-radius: 0;
+        overflow: hidden;
+
+        svg {
+          fill: @color-light;
+          display: inline-block;
+          .transition();
+        }
+      }
+
+      & > * {
+        float: left;
+      }
+    }
+
+    .pdsdk-timechart-shrink-grow {
+      padding: 3px;
+
+      svg {
+        //fill: @color-light;
+        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+        transform: rotate(270deg);
+      }
+    }
+
+    .pdsdk-timechart-control {
+      padding: 3px;
+
+      svg {
+        //fill: @color-light;
+        -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+        transform: rotate(180deg);
+      }
+    }
+
+    .pdsdk-timechart-fullscreen {
+      padding: 3px;
+    }
+
+    .pdsdk-timechart-play {
+      padding: 4px 2px;
+    }
+
+    .pdsdk-timechart-stop {
+      padding: 4px 2px;
+      display: none;
+    }
+
+    .pdsdk-timechart-settings {
+      padding: 4px;
+      //svg {
+      //  fill: @color-primary;
+      //}
+      //&:hover {
+      //  svg {
+      //    fill: @color-light;
+      //  }
+      //}
+    }
+
+    .pdsdk-timechart {
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .pdsdk-timechart-chart-container {
+      height: 200px;
+      overflow: hidden;
+      .transition();
+    }
+
+    &.pdsdk-is-simple, &.pdsdk-in-play {
+      .pdsdk-timechart-chart-container {
+        height: 60px;
+      }
+
+      .pdsdk-timechart {
+        overflow: hidden;
+
+        > div:first-child {
+          margin-top: -140px !important;
+        }
+      }
+    }
+
+    &.pdsdk-is-simple {
+      .pdsdk-timechart-control {
+        svg {
+          -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0)";
+          transform: rotate(0deg);
+        }
+      }
+    }
+
+    &.pdsdk-in-play {
+      .pdsdk-timechart-play, .pdsdk-timechart-control {
+        display: none;
+      }
+
+      .pdsdk-timechart-stop {
+        display: inline-block;
+      }
+    }
+
+    &.pdsdk-timechart-is-hide, &.pdsdk-timechart-disabled {
+      .pdsdk-timechart-controls {
+        & > * {
+          display: none;
+        }
+
+        & > .pdsdk-timechart-shrink-grow {
+          display: inline-block;
+        }
+      }
+
+      .pdsdk-timechart-chart-container, .pdsdk-settings-timechart {
+        display: none;
+      }
+    }
+
+    &.pdsdk-timechart-disabled:not(.pdsdk-timechart-is-hide) {
+      .pdsdk-timechart-controls {
+        & > .pdsdk-timechart-settings, & > *:nth-child(2) {
+          display: inline-block;
+        }
+      }
+    }
+
+    &.pdsdk-timechart-is-hide {
+      .pdsdk-timechart-controls {
+        & > .pdsdk-timechart-shrink-grow {
+          svg {
+            transform: rotate(90deg);
+          }
+        }
+      }
+    }
+  }
+
+  .@{ZNCPrefix}menu-container {
+    z-index: 2;
+  }
+
+  .pdsdk-timechart-full {
+    height: 400px;
+  }
+}
+
+.pdsdk-timechart-full-dialog .pdui-modal-content{
+  max-width: 90%;
+  width: 90%;
+}
+
+.daterangepicker .drp-buttons .btn {
+  height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  padding: 0 16px;
+}

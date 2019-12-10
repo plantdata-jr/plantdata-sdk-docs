@@ -1,0 +1,41 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-selection-control-group {
+    .pdvis-baidu-controls {
+      width: 120px;
+      height: 40px;
+    }
+
+    .pdvis-baidu-control {
+      width: 40px;
+      height: 40px;
+      background: white;
+      cursor: pointer;
+      float: left;
+      color: @color-font-04;
+      .box-shadow();
+
+      svg {
+        fill: @color-font-04;
+        margin: 8px;
+      }
+
+      &.active, &:hover {
+        color: @color-primary;
+
+        svg {
+          fill: @color-primary;
+        }
+      }
+
+      &.pdvis-baidu-control-handler svg {
+        transform: scale(0.8);
+      }
+
+      &.pdvis-baidu-control-rectangle svg {
+        transform: scale(1.25);
+      }
+    }
+  }
+}

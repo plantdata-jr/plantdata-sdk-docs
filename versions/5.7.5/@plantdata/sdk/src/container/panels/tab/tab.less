@@ -1,0 +1,26 @@
+@import "../../../define/index";
+
+.plantdata-ns.pd-container {
+  .pd-panel {
+    &.pd-panel-fixed {
+      .pd-panel-tabs[data-tab-num="1"] {
+        height: 0;
+        & ~ .pd-panel-pages {
+          height: 100%;
+        }
+      }
+    }
+    .pd-panel-pages {
+      position: relative;
+      & > * {
+        display: none;
+        height: 100%;
+        overflow: auto;
+        .scroll();
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}

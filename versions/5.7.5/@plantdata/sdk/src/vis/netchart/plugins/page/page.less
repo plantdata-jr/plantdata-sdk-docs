@@ -1,0 +1,82 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-page-container {
+    right: 0;
+    line-height: 24px;
+    margin-right: 16px;
+
+    .page-size-container {
+      float: left;
+      color: @color-font-03;
+      height: 40px;
+    }
+
+    select {
+      background: transparent;
+      border-radius: 2px;
+      border-color: transparent;
+      height: 24px;
+      outline: 0;
+      color: @color-primary;
+    }
+
+    button {
+      height: 40px;
+      line-height: 40px;
+      float: left;
+      min-width: 40px;
+
+      svg {
+        fill: @color-font-03;
+      }
+
+      &:hover {
+        svg {
+          fill: @color-primary;
+        }
+      }
+
+      &[disabled] {
+        cursor: not-allowed;
+
+        svg {
+          fill: @color-font-02;
+        }
+      }
+    }
+
+    .pdvis-page-pagesize {
+      width: 48px;
+      vertical-align: bottom;
+
+      & > span {
+        background-color: transparent;
+        border: 0;
+      }
+    }
+  }
+
+  .pd-panel-float-top {
+    .pdvis-page-container {
+      margin-right: 0;
+    }
+  }
+}
+
+.pdvis-page-pagesize-custom {
+  svg {
+    vertical-align: -4px;
+  }
+  &:hover svg, &.active svg{
+    fill: @color-primary;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pdvis-page-container {
+    .page-size-container {
+      display: none;
+    }
+  }
+}

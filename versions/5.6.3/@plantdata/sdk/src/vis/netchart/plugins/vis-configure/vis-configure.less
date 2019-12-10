@@ -1,0 +1,86 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-vis-configure-panel {
+    height: 100%;
+    position: relative;
+    .pdvis-vis-configure-item {
+      .pdvis-vis-configure-title {
+        background: @color-general-ac06;
+        padding: 11px 8px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        label {
+          padding-right: 0;
+        }
+      }
+      .pdvis-vis-configure-content {
+        &[data-type="link-length"] {
+          padding: 8px 16px;
+        }
+        .pdui-switch {
+          margin: 0;
+          vertical-align: -4px;
+        }
+      }
+      .pdvis-vis-configure-node-display {
+        padding: 8px 16px;
+      }
+    }
+    .pdvis-vis-configure-body {
+      height: 100%;
+      overflow: auto;
+      .scroll();
+    }
+    .pd-plugin-foot {
+      text-align: right;
+      padding: 8px;
+      border-top: @divider-default;
+      background: @color-light;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      button {
+        .border-radius();
+        margin-left: 8px;
+      }
+    }
+  }
+  .pd-panel-box {
+    .pd-plugin-foot {
+      position: static;
+    }
+  }
+  .pdvis-mixins-content {
+    .pdvis-vis-configure-body {
+      height: auto;
+    }
+    .pd-plugin-foot {
+      position: static;
+    }
+  }
+  &.pdvis-vis-configure-mask {
+    position: fixed;
+    z-index: 1002;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    .pdvis-vis-configure-radius-slider {
+      position: absolute;
+      z-index: 1;
+      background: white;
+      padding: 8px 4px;
+      display: flex;
+      flex-direction: row;
+      .box-shadow-2;
+      .pdvis-vis-configure-slider-label {
+        text-align: center;
+      }
+      .pdvis-vis-configure-slider-radius, .pdvis-vis-configure-slider-length {
+        display: inline-block;
+      }
+    }
+  }
+}

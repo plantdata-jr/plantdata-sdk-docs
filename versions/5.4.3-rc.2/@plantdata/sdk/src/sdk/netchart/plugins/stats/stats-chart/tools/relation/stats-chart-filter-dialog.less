@@ -1,0 +1,72 @@
+@import "../../../../../../../define/index";
+
+.plantdata-ns {
+
+  &.pdsdk-stats-chart-filter-dialog {
+    .pdsdk-stats-chart-filter-apply-type {
+      margin-bottom: 16px;
+    }
+
+    .pdsdk-stats-chart-filter-type {
+      width: 250px;
+      float: left;
+      margin-top: 0;
+    }
+
+    .pdsdk-stats-chart-filter-selected-item {
+      margin-right: 8px;
+      margin-bottom: 8px;
+    }
+
+    .pdsdk-stats-chart-filter-autocomplete {
+      float: right;
+    }
+
+    .pdsdk-stats-chart-filter-options {
+      background: @color-general-ac06;
+      border: @divider-default;
+      max-height: 200px;
+      padding: 8px;
+      .scroll();
+
+      .pdvis-edit-no-option {
+        padding: 48px;
+        text-align: center;
+      }
+
+      &.pdsdk-stats-chart-filter-options-1 {
+        .pdui-checkbox {
+          width: 100%;
+        }
+      }
+
+      &.pdsdk-stats-chart-filter-options-2 {
+        .pdui-checkbox {
+          width: 50%;
+        }
+      }
+
+      &.pdsdk-stats-chart-filter-options-3 {
+        .pdui-checkbox {
+          width: 33%;
+        }
+      }
+
+      .pdui-checkbox {
+        .pdsdk-stats-chart-filter-options-name {
+
+        }
+
+        .pdsdk-stats-chart-filter-options-meaningTag {
+          margin-left: 8px;
+          .font-caption;
+        }
+      }
+    }
+
+    .pdsdk-stats-chart-filter-pagination {
+      padding-top: 8px;
+      text-align: right;
+    }
+  }
+}

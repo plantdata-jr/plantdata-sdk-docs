@@ -1,0 +1,73 @@
+@import "../../../define/index";
+
+.plantdata-ns {
+  .pd-panel-float {
+    z-index: 2;
+    margin: 16px 16px;
+    &.pd-panel-float-left, &.pd-panel-float-right {
+      top: 0;
+      bottom: 0;
+      width: 0;
+      & > * {
+        margin-bottom: 16px;
+      }
+    }
+    &.pd-panel-float-left {
+      left: 0;
+    }
+    &.pd-panel-float-right {
+      left: auto;
+      right: 0;
+      & > * {
+        float: right;
+      }
+    }
+    &.pd-panel-float-top, &.pd-panel-float-bottom {
+      left: 0;
+      right: 0;
+      height: 0;
+    }
+    &.pd-panel-float-top {
+      top: 0;
+      &:not(:empty) {
+        & ~ .pd-panel-float-right {
+          top: 56px;
+        }
+      }
+    }
+    &.pd-panel-float-bottom {
+      top: auto;
+      bottom: 0;
+      margin-right: 40px;
+    }
+    &.pd-panel-float-mask {
+      z-index: 1000;
+      margin: 0;
+    }
+  }
+
+  .pd-btn-float-group {
+    .pd-btn-float {
+      border-radius: 0;
+      border: 0;
+      border-left: @divider-default;
+      &:first-child {
+        border-radius: @border-radius 0 0 @border-radius;
+        border-left: 0;
+      }
+      &:last-child {
+        border-radius: 0 @border-radius @border-radius 0;
+      }
+    }
+  }
+
+  .pd-btn-float {
+    background: @color-light;
+    .box-shadow();
+    outline: none !important;
+    padding: 8px;
+    &.pdui-btn:hover {
+      background-color: @color-general-ac06;
+    }
+  }
+}

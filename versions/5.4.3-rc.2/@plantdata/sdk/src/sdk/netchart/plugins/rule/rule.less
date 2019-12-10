@@ -1,0 +1,155 @@
+@import "../../../../define/index";
+
+.pdvis-namespace {
+  .pdvis-edit-rule-panel {
+    .pdvis-edit-item {
+      position: relative;
+    }
+
+    .pdvis-edit-rule-body {
+      .pdvis-edit-item {
+        .pdvis-edit-item-title {
+          height: 43px;
+
+          label.pdsdk-rule-select {
+            float: none;
+          }
+        }
+
+        .pdvis-edit-item-content {
+          .pdvis-edit-item-label {
+            width: 75px;
+            display: block;
+            float: left;
+          }
+        }
+      }
+    }
+
+    .pdvis-edit-rule-footer {
+      padding: 16px;
+      overflow: hidden;
+
+      .pdvis-edit-rule-add {
+        float: right;
+      }
+    }
+  }
+
+  &.pdvis-rule-editor {
+    max-width: 640px;
+    width: 640px;
+
+    .pdui-modal-body {
+      max-height: 400px;
+      .scroll;
+      overflow-x: hidden;
+    }
+
+    .pdvis-edit-item-single {
+      .pdui-textarea {
+      }
+    }
+
+    .pdui-table td {
+      padding: 0;
+    }
+
+    table {
+      .pdvis-edit-item-single {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        input, select {
+          border: 0;
+          background: transparent;
+          width: 120px;
+        }
+
+        .pdui-switch.pdui-switch-md {
+          & > input + * {
+            min-width: 56px;
+          }
+        }
+
+        &.error {
+          input, select {
+            border-bottom: 3px solid @color-error;
+          }
+        }
+      }
+    }
+
+    .pdvis-rule-add-new {
+      margin-top: 16px;
+
+      svg {
+        fill: @color-light;
+        vertical-align: -7px;
+      }
+    }
+  }
+
+  &.pdvis-edit-rule-add-dialog .pdui-modal-content {
+    max-width: 800px;
+    width: 800px;
+
+    .pdui-modal-body {
+      .scroll();
+      max-height: 600px;
+      margin: 24px 0;
+      padding: 0 24px;
+
+      .pdui-textarea {
+        display: block;
+        resize: vertical;
+      }
+
+      .pdvis-edit-item-array {
+        .pdvis-edit-item-title {
+          svg {
+            float: right;
+            cursor: pointer;
+            fill: rgba(0, 0, 0, .6);
+          }
+        }
+
+        .pdvis-edit-item-content {
+          .pdui-form-fieldset {
+            overflow: hidden;
+            width: 100%;
+
+            .pdvis-edit-item {
+              float: left;
+              //width: calc(~"25% - 6px");
+              //width: 20%;
+              &:last-of-type {
+                width: 56px;
+              }
+
+              .pdui-input {
+                width: 100%;
+              }
+
+              select {
+                width: 100%;
+              }
+
+              .pdui-switch {
+                margin-top: 4px;
+              }
+            }
+
+            svg {
+              float: right;
+              cursor: pointer;
+              fill: rgba(0, 0, 0, .6);
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

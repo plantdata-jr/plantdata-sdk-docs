@@ -1,0 +1,38 @@
+@import "../../../../../define/index";
+
+.pdvis-namespace {
+  .pdsdk-stats-chart-item {
+    .pdsdk-stats-entity-attrvalue {
+      .pdsdk-stats-chart-edit-x {
+        .pdvis-edit-item-select[name="conceptId"] {
+          width: 80px;
+        }
+
+        .pdvis-edit-item-select[name="xAxis"] {
+          width: 112px;
+        }
+      }
+
+      .pdsdk-stats-chart-edit-merge, .pdsdk-stats-chart-edit-type {
+        .clearfix;
+
+        label {
+          float: left;
+          line-height: 32px;
+        }
+
+        .pdvis-edit-item-select {
+          width: calc(~"100% - 120px");
+          margin-bottom: 8px;
+          float: right;
+        }
+      }
+
+      .pdsdk-stats-chart-edit-type {
+        .pdvis-edit-item-select {
+          width: calc(~"100% - 80px");
+        }
+      }
+    }
+  }
+}

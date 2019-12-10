@@ -1,0 +1,79 @@
+@import "../../../../../../define/index";
+
+.plantdata-ns {
+  @label-width: 120px;
+
+  &.pdsdk-stats-chart-edit-dialog {
+    .pdvis-edit-item.pdvis-edit-item-single {
+      & > label[title] {
+        width: @label-width;
+      }
+
+      & > .pdvis-edit-item-select {
+        width: calc(~"100% - @{label-width}");
+      }
+    }
+
+    .pdsdk-stats-chart-editor {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+
+      .pdsdk-stats-chart-edit-form {
+        padding: 0 0 0 8px;
+
+        & > * {
+          margin: 8px 0;
+          position: static;
+        }
+
+        label {
+          width: @label-width;
+          line-height: 32px;
+          float: left;
+        }
+
+        .pdsdk-stats-chart-edit-chart-type {
+          margin-bottom: 8px;
+
+          select {
+            width: calc(~"100% - @{label-width}");
+          }
+        }
+
+        .pdsdk-stats-chart-edit-title {
+          margin-bottom: 8px;
+
+          input {
+            width: calc(~"100% - @{label-width}");
+          }
+        }
+
+        .pdsdk-stats-chart-edit-x {
+          margin-bottom: 8px;
+        }
+
+        .pdsdk-stats-chart-edit-x, .pdsdk-stats-chart-edit-y {
+          select {
+            width: calc(~"100% - @{label-width}");
+          }
+        }
+      }
+
+      .pdsdk-stats-chart-edit-control {
+        padding: 8px 0;
+        text-align: right;
+
+        button {
+          margin-left: 8px;
+        }
+      }
+
+      .pdsdk-stats-chart-edit-merge, .pdsdk-stats-chart-edit-type {
+        .pdvis-edit-item-select {
+          width: calc(~"100% - @{label-width}");
+        }
+      }
+    }
+  }
+}

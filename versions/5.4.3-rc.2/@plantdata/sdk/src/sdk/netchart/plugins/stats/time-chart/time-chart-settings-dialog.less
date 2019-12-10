@@ -1,0 +1,50 @@
+@import "../../../../../define/index";
+
+.pdvis-namespace {
+  .pdsdk-settings-timechart {
+
+    .pdsdk-settings-tip {
+      color: @color-error;
+      margin-top: 8px;
+      padding-left: 110px;
+    }
+
+    .pdvis-edit-item.pdvis-edit-item-single {
+      margin-top: 0;
+
+      & > label[title] {
+        width: 110px;
+      }
+
+      & > .pdui-switch {
+        margin: 4px 0;
+      }
+
+      & > .pdvis-cr-box label {
+        line-height: 32px;
+        height: 32px;
+      }
+
+      .pdvis-edit-item-postfix {
+        width: 64px;
+        max-width: 64px;
+      }
+    }
+
+    .pdvis-edit-item.pdsdk-input-daterange > label[title] + input {
+      width: calc(~"100% - 188px");
+      vertical-align: -2px;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pdvis-namespace {
+    .pdsdk-settings-timechart {
+      .pdvis-edit-item.pdsdk-input-daterange > label[title] + input {
+        width: calc(~"100% - 108px");
+        vertical-align: -2px;
+      }
+    }
+  }
+}

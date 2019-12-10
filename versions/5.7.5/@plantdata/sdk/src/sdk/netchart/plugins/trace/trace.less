@@ -1,0 +1,241 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdvis-edit-trace-panel {
+    .pdvis-edit-item {
+      position: relative;
+    }
+
+    .pdvis-edit-trace-no-data {
+      padding-top: 80px;
+      display: none;
+    }
+
+    .pdvis-edit-trace-body {
+      padding-bottom: 50px;
+      .pdvis-edit-item {
+        &.pdvis-edit-item-type-group {
+          & > .pdvis-edit-item-title {
+            height: 43px;
+            user-select: none;
+
+            .pdvis-edit-item-checkEnable {
+              width: calc(~"100% - 30px");
+
+              span {
+                display: block;
+              }
+
+              .pdsdk-trace-title {
+                .line-hidden;
+                display: block;
+              }
+            }
+
+            .pdsdk-trace-entities-number {
+              position: absolute;
+              right: 40px;
+              top: 12px;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              color: white;
+              background: @color-warn;
+              text-align: center;
+              display: none;
+
+              &[data-length="0"] {
+                background: @color-error;
+              }
+            }
+          }
+
+          &.selected {
+            & > .pdvis-edit-item-title {
+              .pdvis-edit-item-checkEnable {
+                width: calc(~"100% - 60px");
+              }
+            }
+            .pdsdk-trace-entities-number {
+              display: block;
+            }
+          }
+        }
+
+        .pdvis-edit-item-type-textarea {
+          .pdvis-edit-item-title {
+            background: none;
+          }
+
+          .pdui-textarea {
+            width: 100%;
+            resize: none;
+            min-height: 100px;
+          }
+        }
+
+        .pdvis-tag-editor-data {
+          display: block;
+        }
+
+        .pdvis-edit-item-content {
+          .pdvis-edit-item-label {
+            width: 75px;
+            display: block;
+            float: left;
+          }
+        }
+
+        .pdsdk-tag-prompt {
+          width: 100%;
+
+          .pdvis-tag-editor-data .pdvis-tag-editor-item {
+            margin-bottom: 4px;
+          }
+        }
+
+        .pdvis-edit-trace-ruleId {
+          display: none;
+        }
+      }
+
+      &:empty {
+        & ~ .pdvis-edit-trace-no-data {
+          display: block;
+        }
+
+        & ~ .pd-plugin-foot {
+          display: none;
+        }
+      }
+    }
+
+    .pdvis-edit-trace-footer {
+      padding: 16px;
+      overflow: hidden;
+
+      .pdvis-edit-trace-add {
+        float: right;
+      }
+    }
+  }
+
+  &.pdvis-trace-editor {
+    .pdui-modal-content {
+      max-width: 640px;
+      width: 640px;
+    }
+
+    .pdui-modal-body {
+      max-height: 400px;
+      .scroll;
+      overflow-x: hidden;
+    }
+
+    .pdvis-edit-item-single {
+      .pdui-textarea {
+      }
+    }
+
+    .pdui-table td {
+      padding: 0;
+    }
+
+    table {
+      .pdvis-edit-item-single {
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+
+        input, select {
+          border: 0;
+          background: transparent;
+          width: 120px;
+        }
+
+        .pdui-switch.pdui-switch-md {
+          & > input + * {
+            min-width: 56px;
+          }
+        }
+
+        &.error {
+          input, select {
+            border-bottom: 3px solid @color-error;
+          }
+        }
+      }
+    }
+
+    .pdvis-trace-add-new {
+      margin-top: 16px;
+
+      svg {
+        fill: @color-light;
+        vertical-align: -7px;
+      }
+    }
+  }
+
+  &.pdvis-edit-trace-add-dialog .pdui-modal-content {
+    max-width: 800px;
+    width: 800px;
+
+    .pdui-modal-body {
+      .scroll();
+      max-height: 600px;
+      margin: 24px 0;
+      padding: 0 24px;
+
+      .pdui-textarea {
+        display: block;
+        resize: vertical;
+      }
+
+      .pdvis-edit-item-array {
+        .pdvis-edit-item-title {
+          svg {
+            float: right;
+            cursor: pointer;
+            fill: rgba(0, 0, 0, .6);
+          }
+        }
+
+        .pdvis-edit-item-content {
+          .pdui-form-fieldset {
+            overflow: hidden;
+            width: 100%;
+
+            .pdvis-edit-item {
+              float: left;
+              //width: calc(~"25% - 6px");
+              //width: 20%;
+              &:last-of-type {
+                width: 56px;
+              }
+
+              .pdui-input {
+                width: 100%;
+              }
+
+              select {
+                width: 100%;
+              }
+
+              .pdui-switch {
+                margin-top: 4px;
+              }
+            }
+
+            svg {
+              float: right;
+              cursor: pointer;
+              fill: rgba(0, 0, 0, .6);
+              margin-top: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

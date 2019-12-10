@@ -1,0 +1,33 @@
+@import "../../../../define/index";
+
+.pdvis-namespace {
+  .pdvis-chart-filter-panel {
+    .pdvis-edit-item[data-path="attAttFilters"] {
+      .pdvis-edit-item-content {
+        .pd-no-data {
+          padding: 16px 0;
+        }
+
+        .pdsdk-filter-add {
+          border-top: @divider-default;
+          padding: 8px 8px;
+
+          button {
+            width: 100%;
+
+            svg {
+              vertical-align: -7px;
+              fill: @color-primary;
+            }
+
+            &:hover {
+              svg {
+                fill: @color-light;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

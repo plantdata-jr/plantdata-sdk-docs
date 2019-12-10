@@ -1,0 +1,370 @@
+@import "../../../../define/index";
+
+.left-overlay() {
+  .pd-panel-pages {
+    border-right: @divider-default;
+  }
+  .pd-panel-tabs {
+    right: -40px;
+  }
+  .pd-panel-tab {
+    .pd-panel-icon {
+      left: 16px;
+      .border-radius(0, @border-radius, @border-radius, 0);
+    }
+    .pd-panel-tooltip {
+      left: 0;
+      .border-radius(0, @border-radius, @border-radius, 0);
+      text-indent: 40px;
+    }
+  }
+}
+
+.right-overlay() {
+  .pd-panel-pages {
+    border-left: @divider-default;
+  }
+  .pd-panel-tabs {
+    left: -40px;
+  }
+  .pd-panel-tab {
+    .pd-panel-icon {
+      right: 16px;
+      .border-radius();
+    }
+    .pd-panel-tooltip {
+      right: 0;
+      .border-radius(@border-radius, 0, 0, @border-radius);
+    }
+  }
+}
+
+.plantdata-ns {
+  @panels-control-width: 6px;
+  .pd-panel {
+    .pd-panel-control {
+      display: none;
+      position: absolute;
+      width: @panels-control-width;
+      height: 60px;
+      top: 50%;
+      margin-top: -30px;
+      padding: 24px 1px;
+      background: @color-primary;
+      cursor: pointer;
+      div.pd-panel-control-line {
+        height: 2px;
+        background: @color-light;
+        margin-bottom: 2px;
+      }
+    }
+    &.pd-panel-overlay {
+      .pd-panel-tabs {
+        width: 40px;
+        position: absolute;
+        top: 16px;
+      }
+      .pd-panel-tab {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 16px;
+        position: relative;
+        .middle();
+        .transition();
+        &:hover .pd-panel-icon {
+          background: @color-general-ac06;
+        }
+        &:hover {
+          color: @color-primary;
+          svg {
+            fill: @color-primary;
+          }
+        }
+        &.active {
+          color: @color-light;
+          .pd-panel-icon {
+            background: @color-primary;
+            svg {
+              fill: @color-light;
+            }
+          }
+        }
+        &.disabled {
+          opacity: .3;
+          cursor: not-allowed;
+        }
+        svg {
+          fill: @color-font-03;
+        }
+        .pd-panel-icon {
+          position: absolute;
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          top: 0;
+          //background-color: @color-general-ac03;
+          z-index: 1;
+          .transition();
+          background: @color-light;
+          .box-shadow();
+        }
+        .pd-panel-tooltip {
+          text-align: left;
+          padding: 0 8px;
+          height: 40px;
+          width: 40px;
+          overflow: hidden;
+          //background-color: @color-general-ac03;
+          position: absolute;
+          right: 0;
+          top: 0;
+          .font-body-1();
+          line-height: 40px;
+          color: @color-light;
+          .transition();
+        }
+      }
+      .pd-panel-pages {
+        height: 100%;
+      }
+      &.active {
+        z-index: 100;
+      }
+    }
+    &.pd-panel-fixed {
+      @tab-height: 40px;
+      &.pd-panel-no-child {
+        display: none;
+      }
+      .pd-panel-tabs {
+        height: @tab-height;
+        overflow: hidden;
+      }
+      .pd-panel-tab {
+        height: @tab-height - 1px;
+        text-align: center;
+        .transition();
+        float: left;
+        border-bottom: 1px solid @color-general-ac04;
+        position: relative;
+        &:hover, &.active {
+          height: @tab-height;
+          cursor: auto;
+          &:not(:only-child) {
+            border-bottom: 3px solid @color-primary;
+          }
+          .pd-panel-icon, .pd-panel-tooltip {
+            color: @color-primary;
+          }
+          svg {
+            fill: @color-primary;
+          }
+        }
+        svg {
+          fill: @color-font-04;
+        }
+        &.disabled {
+          opacity: .3;
+          cursor: not-allowed;
+        }
+        .pd-panel-icon {
+          width: 40px;
+          height: 40px;
+          display: none;
+          padding: 4px;
+          .transition();
+        }
+        .pd-panel-tooltip {
+          padding: 0 8px;
+          display: block;
+          height: 40px;
+          .font-body-1();
+          line-height: 40px;
+          color: @color-font-04;
+          .transition();
+          vertical-align: top;
+        }
+        &:not(.active) {
+          cursor: pointer !important;
+        }
+      }
+      .pd-panel-pages {
+        height: calc(~"100% - @{tab-height}");
+      }
+      .pd-panel-control {
+        display: block;
+      }
+    }
+  }
+  @left-panel-width: 320px;
+  .pd-panel-left {
+    top: 0;
+    bottom: 0;
+    left: -@left-panel-width;
+    z-index: 10;
+    width: @left-panel-width;
+    background: @color-light;
+    &.pd-panel-overlay {
+      .left-overlay()
+    }
+    &.pd-panel-fixed {
+      z-index: 2;
+      border-right: @divider-default;
+      border-right-width: @panels-control-width;
+      left: @panels-control-width - @left-panel-width;
+      .pd-panel-pages {
+        width: @left-panel-width - @panels-control-width;
+      }
+      .pd-panel-control {
+        left: auto;
+        right: -@panels-control-width;
+      }
+    }
+    &.active {
+      left: 0;
+    }
+    &:empty {
+      display: none;
+    }
+  }
+  @right-panel-width: 256px;
+  .pd-panel-right {
+    right: -@right-panel-width;
+    top: 0;
+    z-index: 10;
+    bottom: 0;
+    left: auto;
+    width: @right-panel-width;
+    background: @color-light;
+    &.pd-panel-overlay {
+      .right-overlay()
+    }
+    &.pd-panel-fixed {
+      z-index: 2;
+      border-left: @divider-default;
+      border-left-width: @panels-control-width;
+      right: @panels-control-width - @right-panel-width;
+      .pd-panel-pages {
+        width: @right-panel-width - @panels-control-width;
+      }
+      .pd-panel-control {
+        left: -@panels-control-width;
+      }
+    }
+    &.active {
+      right: 0;
+    }
+    &:empty {
+      display: none;
+    }
+  }
+  .pd-panel-overlay:not(:empty) {
+    &.pd-panel-left {
+      & ~ .pd-panel-float {
+        &-top, &-left {
+          margin-left: 72px;
+        }
+      }
+    }
+    &.pd-panel-right {
+      & ~ .pd-panel-float {
+        &-top, &-right {
+          margin-right: 72px;
+        }
+      }
+    }
+  }
+  .pd-panel-fixed.active:not(:empty):not(.pd-panel-no-child) {
+    &.pd-panel-left {
+      & ~ .pd-panel-main {
+        left: @left-panel-width;
+      }
+      & ~ .pd-panel-float {
+        &-top, &-bottom, &-left {
+          left: @left-panel-width;
+        }
+      }
+    }
+    &.pd-panel-right {
+      & ~ .pd-panel-main {
+        right: @right-panel-width;
+      }
+      & ~ .pd-panel-float {
+        &-top, &-bottom, &-right {
+          right: @right-panel-width;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .plantdata-ns {
+    .pd-panel-left {
+      left: calc(~"-100% + 56px");
+      width: calc(~"100% - 56px");
+      &.pd-panel.pd-panel-overlay.active .pd-panel-tabs {
+        border-right: @divider-default;
+      }
+    }
+    .pd-panel-right {
+      right: calc(~"-100% + 56px");
+      width: calc(~"100% - 56px");
+      &.pd-panel.pd-panel-overlay.active .pd-panel-tabs {
+        border-left: @divider-default;
+      }
+    }
+    .pd-panel.pd-panel-overlay.active {
+      @tab-height: 40px;
+      .pd-panel-tabs {
+        height: @tab-height;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        left: 0;
+        top: 0;
+      }
+      .pd-panel-tab {
+        display: none;
+        &.active {
+          height: @tab-height - 1px;
+          width: 100%;
+          text-align: left;
+          justify-content: flex-start;
+          .transition();
+          float: left;
+          border-bottom: 1px solid @color-general-ac04;
+          position: relative;
+          display: block;
+          .pd-panel-icon {
+            background: transparent;
+            left: 0;
+            top: 0;
+            box-shadow: none;
+            svg {
+              fill: @color-primary;
+            }
+          }
+          .pd-panel-tooltip {
+            padding: 0 8px;
+            display: block;
+            height: 40px;
+            .font-body-1();
+            line-height: 40px;
+            color: @color-font-04;
+            .transition();
+            vertical-align: top;
+            position: relative;
+            width: 100%;
+            text-indent: 40px;
+          }
+        }
+      }
+      .pd-panel-pages {
+        height: calc(~"100% - @{tab-height}");
+      }
+    }
+  }
+}

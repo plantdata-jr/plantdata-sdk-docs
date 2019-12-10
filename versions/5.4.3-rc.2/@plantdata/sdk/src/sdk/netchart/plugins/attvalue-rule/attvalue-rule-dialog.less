@@ -1,0 +1,103 @@
+@import "../../../../define/index";
+
+.pdvis-namespace {
+  &.pdsdk-filter-edge-dialog {
+    .pdui-modal-head .pdui-tab-nav {
+      border-bottom: 0;
+    }
+
+    .pdvis-filter-att-item {
+      //margin: 8px 8px 16px;
+      //border-bottom: @divider-default;
+      //padding-bottom: 8px;
+      .pd-no-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        svg {
+          fill: @color-font-03;
+        }
+
+        .pd-no-data-text {
+          color: @color-font-03;
+        }
+      }
+
+      & > .pd-no-data {
+        display: none;
+      }
+
+      .pdvis-filter-att-value > input {
+        width: 100%; // ? 自动完成BUG
+      }
+
+      .pdvis-filter-att-select {
+        width: 100%;
+        margin-bottom: 8px;
+        overflow: hidden;
+      }
+
+      .pdvis-filter-att-type {
+        width: calc(~"34% - 16px");
+        margin-right: 0;
+      }
+
+      .pdvis-filter-att-split {
+        display: inline-block;
+        width: 20px;
+        text-align: center;
+      }
+
+      .pdvis-filter-att-start, .pdvis-filter-att-end {
+        width: calc(~"50% - 10px");
+        display: inline-block;
+        margin-bottom: 8px;
+
+        select {
+          width: 88px;
+          margin-right: 8px;
+        }
+
+        input {
+          width: calc(~"100% - 96px");
+        }
+      }
+
+      .pdvis-filter-att-end {
+        margin-right: 0;
+      }
+
+      .pdvis-filter-att-prompt {
+        margin-bottom: 8px;
+        width: 100%;
+      }
+
+      .pdvis-filter-att-list {
+        max-height: 200px;
+        .scroll();
+      }
+
+      .pdvis-cr-box > label {
+        padding: 0 16px 0 0;
+        width: 120px;
+        .line-hidden;
+      }
+
+      &.pdvis-filter-att-item-no-data {
+        & > * {
+          display: none;
+        }
+
+        & > .pd-no-data {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+

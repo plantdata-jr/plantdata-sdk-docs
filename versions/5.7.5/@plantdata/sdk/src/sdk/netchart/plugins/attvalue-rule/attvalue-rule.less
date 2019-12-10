@@ -1,0 +1,67 @@
+@import "../../../../define/index";
+
+.plantdata-ns {
+  .pdsdk-attvalue-rule-container {
+    .pdvis-filter-edge-tag-item {
+      border-color: @color-primary;
+
+      &.active {
+        color: white;
+        border-color: @color-primary;
+        background-color: @color-primary;
+
+        i.close-icon {
+          .icon-close(white);
+        }
+      }
+    }
+
+    .pdsdk-attvalue-rule-legend {
+      padding: 0 8px 8px;
+      .font-caption;
+
+      span {
+        margin-right: 8px;
+      }
+
+      i {
+        width: 16px;
+        height: 8px;
+        display: inline-block;
+        margin-right: 4px;
+      }
+
+      .active {
+        background: @color-primary;
+      }
+
+      .inactive {
+        background: @color-primary-ac05;
+        border: 1px solid @color-primary;
+      }
+    }
+
+    .pdvis-filter-edge-tags:empty {
+      & ~ .pdsdk-attvalue-rule-legend {
+        display: none
+      }
+
+      & ~ .pd-plugin-foot .pd-btn-positive {
+        //display: none;
+      }
+    }
+
+    .pd-plugin-foot {
+      direction: rtl;
+      padding: 8px;
+      border-top: @divider-default;
+      background: white;
+
+      button {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+
