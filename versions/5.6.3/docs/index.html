@@ -62,75 +62,61 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<a href="#plantdatasdk" id="plantdatasdk" style="color: inherit; text-decoration: none;">
-					<h1>@plantdata/sdk</h1>
+				<a href="#库文件引入说明" id="库文件引入说明" style="color: inherit; text-decoration: none;">
+					<h2>库文件引入说明</h2>
 				</a>
-				<p>配置手册 <a href="https://plantdata-jr.github.io/plantdata-sdk-docs/index.html#tab-docs">docs</a></p>
-				<a href="#一、基础使用说明" id="一、基础使用说明" style="color: inherit; text-decoration: none;">
-					<h2>一、基础使用说明</h2>
-				</a>
-				<a href="#方式一" id="方式一" style="color: inherit; text-decoration: none;">
-					<h3>方式一</h3>
-				</a>
-				<p><a href="https://plantdata-jr.github.io/plantdata-sdk-docs/demo/demo1.html">Demo</a></p>
-				<a href="#1、使用方法1" id="1、使用方法1" style="color: inherit; text-decoration: none;">
-					<h4>1、使用方法1</h4>
-				</a>
-				<a href="#step1" id="step1" style="color: inherit; text-decoration: none;">
-					<h4>step1:</h4>
-				</a>
+				<ul>
+					<li>方式一</li>
+				</ul>
+				<p><a href="../demo/demo1.html">Demo</a></p>
 				<p>在网页中引入完整插件包 <code>pd-sdk.all.js</code> 以及样式文件 <code>pd-sdk.css</code></p>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"&lt;pathTo&gt;/bundles/pd-sdk.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"&lt;pathTo&gt;/bundles/pd-sdk.all.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<a href="#step2" id="step2" style="color: inherit; text-decoration: none;">
-					<h4>step2:</h4>
-				</a>
-				<p>在合适的位置创建图谱实例</p>
-				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> graph = <span class="hljs-keyword">new</span> PdSDKZcGraph({
-    <span class="hljs-attr">kgName</span>: <span class="hljs-string">'default_graph_m3dyxz4c9ryvpa5m'</span>,
-    <span class="hljs-attr">selector</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'chart'</span>),
-    <span class="hljs-attr">ajaxSettings</span>: {
-        <span class="hljs-attr">baseUrl</span>: <span class="hljs-string">'https://kgms.plantdata.ai/plantdata-sdk/api/sdk/'</span>,
-        <span class="hljs-attr">headers</span>: {
-            <span class="hljs-attr">APK</span>: <span class="hljs-string">'3a33e491b6ff4374bcdd3d74b432668f'</span>
-        }
-    }
-})</code></pre>
-				<a href="#step3" id="step3" style="color: inherit; text-decoration: none;">
-					<h4>step3:</h4>
-				</a>
-				<p>在需要的时候加载数据</p>
-				<pre><code class="language-javascript">graph.load({<span class="hljs-attr">id</span>: <span class="hljs-number">36</span>})</code></pre>
-				<a href="#方式二" id="方式二" style="color: inherit; text-decoration: none;">
-					<h3>方式二</h3>
-				</a>
-				<p><a href="https://plantdata-jr.github.io/plantdata-sdk-docs/demo/demo2.html">Demo</a></p>
-				<a href="#1、使用方法2" id="1、使用方法2" style="color: inherit; text-decoration: none;">
-					<h4>1、使用方法2</h4>
-				</a>
+				<ul>
+					<li>方式二</li>
+				</ul>
+				<p><a href="../demo/demo2.html">Demo</a></p>
 				<p>在网页中引入本插件的所依赖后，再引入插件包 <code>pd-sdk.js</code> 以及样式文件 <code>pd-sdk.css</code></p>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"&lt;pathTo&gt;/bundles/pd-sdk.css"</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">"stylesheet"</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"&lt;pathTo&gt;/jquery.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"&lt;pathTo&gt;/lodash.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"&lt;pathTo&gt;/libs/@zc/netchart.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"&lt;pathTo&gt;/bundles/pd-sdk.js"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></code></pre>
-				<a href="#step2-1" id="step2-1" style="color: inherit; text-decoration: none;">
-					<h4>step2:</h4>
+				<a href="#使用说明" id="使用说明" style="color: inherit; text-decoration: none;">
+					<h2>使用说明</h2>
 				</a>
-				<p>同方法1的step2</p>
-				<a href="#step3-1" id="step3-1" style="color: inherit; text-decoration: none;">
-					<h4>step3:</h4>
-				</a>
-				<p>同方法1的step3</p>
+				<ul>
+					<li>step1:</li>
+				</ul>
+				<p>在合适的位置创建图谱实例</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">const</span> graph = <span class="hljs-keyword">new</span> PdSDKZcGraph({
+    <span class="hljs-attr">kgName</span>: <span class="hljs-string">'default_graph_hgsebhsr66oasaal'</span>,
+    <span class="hljs-attr">selector</span>: <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'chart'</span>),
+    <span class="hljs-attr">ajaxSettings</span>: {
+        <span class="hljs-attr">baseUrl</span>: <span class="hljs-string">'https://kgms.plantdata.ai/plantdata-sdk/api/sdk/'</span>,
+        <span class="hljs-attr">headers</span>: {
+            <span class="hljs-attr">APK</span>: <span class="hljs-string">'74b898aa7fc4415fb50dce992302a558'</span>
+        }
+    }
+})</code></pre>
+				<ul>
+					<li>step2:</li>
+				</ul>
+				<p>在需要的时候加载数据</p>
+				<pre><code class="language-javascript">graph.load({<span class="hljs-attr">id</span>: <span class="hljs-number">13</span>})</code></pre>
 				<a href="#faq" id="faq" style="color: inherit; text-decoration: none;">
 					<h2>FAQ</h2>
 				</a>
 				<p>❓ <strong>为什么功能不能正常展示?</strong></p>
-				<p>请检查依赖库引入顺序是否出错, 时序图谱需要引入echarts</p>
+				<p>请检查依赖库引入顺序是否出错, 时序图谱需要引入echarts、daterangepicker、moment等，可参考gallery的代码</p>
 				<p>❓ <strong>为什么图谱展示出现错位?</strong></p>
 				<p>请检查netchart.css是否正常引入</p>
+				<p>❓ <strong>为什么本库不能通过npm安装使用?</strong></p>
+				<p>由于该项目不属于开源项目，所以未发布在npmjs仓库中，不提供在线安装</p>
+				<p>❓ <strong>图谱分析时部分功能不需要怎么处理?</strong></p>
+				<p>图分析的每个功能都是由图可视化以及其他功能性插件组合而成，可以通过配置关闭不需要的插件</p>
 				<p>❓ <strong>是否可以对含有多个请求的功能模块中（图谱模块，infobox模块等）某个异步请求模块单独设置?</strong></p>
-				<p>参考gallery &gt;&gt; 图谱探索</p>
+				<p>参考gallery &gt;&gt; 时序图谱，该demo的schemaSettings/ajaxSettings对schema接口进行了单独的配置，ajaxSettings的可配置参数请查看jquery的ajax配置</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
@@ -1022,7 +1008,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/pdpluginsettings.html" class="tsd-kind-icon">Pd<wbr>Plugin<wbr>Settings</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/pdsdkajaxsettings.html" class="tsd-kind-icon">PdSDKAjax<wbr>Settings</a>
 					</li>
 					<li class=" tsd-kind-interface">
@@ -1661,7 +1647,7 @@
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/pdtabpaneltabsettings.html" class="tsd-kind-icon">Pd<wbr>Tab<wbr>Panel<wbr>Tab<wbr>Settings</a>
 					</li>
-					<li class=" tsd-kind-interface">
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
 						<a href="interfaces/pduiajaxsettings.html" class="tsd-kind-icon">PdUIAjax<wbr>Settings</a>
 					</li>
 					<li class=" tsd-kind-interface">
