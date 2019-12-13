@@ -1,6 +1,8 @@
 # @plantdata/sdk
 
 [配置手册](https://plantdata-jr.github.io/plantdata-sdk-docs/index.html)
+[download](https://pan.baidu.com/s/19R4ZB_Lcs_hcfKGtmTe-1A)
+
 ## 库文件引入说明
 
 - 方式一
