@@ -1,10 +1,10 @@
 # @plantdata/sdk
-## 下载
-[v8.1](链接: https://pan.baidu.com/s/1F9dJFumLmT61-ZRLU63HGA?pwd=wk96 提取码: wk96 复制这段内容后打开百度网盘手机App，操作更方便哦)
-
 
 [配置手册](https://plantdata-jr.github.io/plantdata-sdk-docs/index.html)
 [download](https://pan.baidu.com/s/19R4ZB_Lcs_hcfKGtmTe-1A)
+
+## 下载
+[v8.1](https://pan.baidu.com/s/1F9dJFumLmT61-ZRLU63HGA?pwd=wk96)
 
 ## 库文件引入说明
 
